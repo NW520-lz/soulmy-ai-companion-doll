@@ -82,23 +82,54 @@ export default function IPShowcaseSection() {
 
                 {/* 角色形象 */}
                 <div className="relative mb-6">
-                  <div className={`w-full h-64 rounded-2xl overflow-hidden ${character.bgColor} shadow-lg relative group-hover:scale-105 transition-transform duration-500`}>
+                  <div className={`w-full h-64 rounded-2xl overflow-hidden shadow-lg relative group-hover:scale-105 transition-transform duration-500`}>
+                    {/* 背景图片 - 为不同角色显示对应背景 */}
+                    {character.id === 'xiaojun' ? (
+                      <div className="absolute inset-0">
+                        <Image
+                          src="/images/train-station-background.jpg"
+                          alt="历史火车站背景"
+                          fill
+                          className="object-cover"
+                          priority
+                        />
+                        {/* 半透明遮罩层 */}
+                        <div className="absolute inset-0 bg-green-900/40"></div>
+                      </div>
+                    ) : character.id === 'wangshifu' ? (
+                      <div className="absolute inset-0">
+                        <Image
+                          src="/images/factory-worker-background.jpg"
+                          alt="工厂工人背景"
+                          fill
+                          className="object-cover"
+                          priority
+                        />
+                        {/* 半透明遮罩层 */}
+                        <div className="absolute inset-0 bg-blue-900/40"></div>
+                      </div>
+                    ) : (
+                      <div className={`absolute inset-0 ${character.bgColor}`}></div>
+                    )}
+
                     {/* 背景装饰 */}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent"></div>
 
                     {/* 角色展示 */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="absolute inset-0 flex items-center justify-center z-10">
                       <div className="text-center">
                         <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${character.color} flex items-center justify-center mb-3 mx-auto shadow-lg`}>
                           <IconComponent className="w-8 h-8 text-white" />
                         </div>
-                        <p className="text-sm text-gray-700 font-medium px-4">{character.visual}</p>
+                        <p className={`text-sm font-medium px-4 ${(character.id === 'xiaojun' || character.id === 'wangshifu') ? 'text-white drop-shadow-lg' : 'text-gray-700'}`}>
+                          {character.visual}
+                        </p>
                       </div>
                     </div>
 
                     {/* 装饰元素 */}
-                    <div className="absolute top-3 right-3 opacity-20">
-                      <Star className="w-5 h-5 text-gray-600" />
+                    <div className="absolute top-3 right-3 opacity-20 z-10">
+                      <Star className={`w-5 h-5 ${character.id === 'xiaojun' ? 'text-white' : 'text-gray-600'}`} />
                     </div>
                   </div>
 

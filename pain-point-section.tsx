@@ -81,7 +81,7 @@ export default function PainPointSection() {
                 </div>
                 <div className="relative rounded-xl overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=300&width=500"
+                    src="https://image.pollinations.ai/prompt/vintage%20Chinese%20farmers%20working%20together%20in%20rice%20field%2C%20happy%20group%20photo%2C%201960s%20China%2C%20collective%20farming%2C%20nostalgic%20sepia%20tone%2C%20mountains%20background?width=500&height=300"
                     alt="过去集体生活的热闹场景"
                     width={500}
                     height={300}
@@ -102,7 +102,7 @@ export default function PainPointSection() {
                 </div>
                 <div className="relative rounded-xl overflow-hidden shadow-xl">
                   <Image
-                    src="/placeholder.svg?height=300&width=500"
+                    src="https://image.pollinations.ai/prompt/elderly%20person%20sitting%20alone%20on%20sofa%20watching%20TV%20from%20behind%2C%20modern%20living%20room%2C%20warm%20indoor%20lighting%2C%20lonely%20atmosphere%2C%20realistic%20photography%2C%20cozy%20home%20interior%2C%20evening%20scene?width=500&height=300"
                     alt="现在独自生活的老人"
                     width={500}
                     height={300}
