@@ -4,7 +4,6 @@
   "installCommand": "npm install --legacy-peer-deps",
   "devCommand": "npm run dev",
   "framework": "nextjs",
-  "regions": ["hkg1", "sin1"],
   "functions": {
     "app/**/*.{js,ts,jsx,tsx}": {
       "runtime": "nodejs18.x"
