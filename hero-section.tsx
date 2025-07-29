@@ -95,14 +95,30 @@ export default function Component() {
           {/* 右侧图片 */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-orange-100 to-amber-100">
-              <Image
-                src="/placeholder.svg?height=600&width=500"
-                alt="慈祥的奶奶与知青晓军AI玩偶在温暖的客厅里"
-                width={500}
-                height={600}
-                className="w-full h-auto object-cover"
-                priority
-              />
+              <div className="w-full h-[600px] bg-gradient-to-br from-orange-200 via-amber-100 to-orange-300 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                {/* 装饰性图标 */}
+                <div className="absolute top-8 left-8 text-orange-400 opacity-30">
+                  <Heart className="w-16 h-16" />
+                </div>
+                <div className="absolute bottom-8 right-8 text-amber-400 opacity-30">
+                  <Users className="w-20 h-20" />
+                </div>
+                <div className="absolute top-1/3 right-12 text-orange-300 opacity-20">
+                  <Star className="w-12 h-12" />
+                </div>
+
+                {/* 主要内容 */}
+                <div className="text-center z-10">
+                  <div className="w-32 h-32 bg-white/80 rounded-full flex items-center justify-center mb-6 mx-auto shadow-lg">
+                    <Sparkles className="w-16 h-16 text-orange-500" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-700 mb-2">SoulMy AI陪伴玩偶</h3>
+                  <p className="text-gray-600">温暖陪伴 · 怀旧情怀</p>
+                </div>
+
+                {/* 背景装饰 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
+              </div>
 
               {/* 装饰性元素 */}
               <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg">

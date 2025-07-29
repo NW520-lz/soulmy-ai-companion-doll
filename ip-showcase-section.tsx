@@ -82,14 +82,24 @@ export default function IPShowcaseSection() {
 
                 {/* 角色形象 */}
                 <div className="relative mb-6">
-                  <div className="w-full h-64 rounded-2xl overflow-hidden bg-white shadow-lg">
-                    <Image
-                      src={`/placeholder.svg?height=300&width=250&text=${character.visual}`}
-                      alt={`${character.name}的形象`}
-                      width={250}
-                      height={300}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                  <div className={`w-full h-64 rounded-2xl overflow-hidden ${character.bgColor} shadow-lg relative group-hover:scale-105 transition-transform duration-500`}>
+                    {/* 背景装饰 */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent"></div>
+
+                    {/* 角色展示 */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${character.color} flex items-center justify-center mb-3 mx-auto shadow-lg`}>
+                          <IconComponent className="w-8 h-8 text-white" />
+                        </div>
+                        <p className="text-sm text-gray-700 font-medium px-4">{character.visual}</p>
+                      </div>
+                    </div>
+
+                    {/* 装饰元素 */}
+                    <div className="absolute top-3 right-3 opacity-20">
+                      <Star className="w-5 h-5 text-gray-600" />
+                    </div>
                   </div>
 
                   {/* 角色图标 */}
