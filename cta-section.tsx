@@ -49,7 +49,7 @@ export default function CTASection() {
                 {/* 礼盒图片 */}
                 <div className="relative mb-6">
                   <Image
-                    src="/placeholder.svg?height=300&width=400&text=SoulMy精美礼盒包装"
+                    src="/images/gift-box.jpeg"
                     alt="SoulMy AI陪伴玩偶精美礼盒"
                     width={400}
                     height={300}

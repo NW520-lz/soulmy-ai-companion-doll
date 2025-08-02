@@ -86,27 +86,42 @@ export default function IPShowcaseSection() {
                     {/* 背景图片 - 为不同角色显示对应背景 */}
                     {character.id === 'xiaojun' ? (
                       <div className="absolute inset-0">
+                        {/* 知青晓军人偶图片 */}
                         <Image
-                          src="/images/train-station-background.jpg"
-                          alt="历史火车站背景"
+                          src="/images/xiaojun-character.png"
+                          alt="知青晓军人偶"
                           fill
-                          className="object-cover"
+                          className="object-cover object-center"
                           priority
                         />
                         {/* 半透明遮罩层 */}
-                        <div className="absolute inset-0 bg-green-900/40"></div>
+                        <div className="absolute inset-0 bg-green-900/20"></div>
                       </div>
                     ) : character.id === 'wangshifu' ? (
                       <div className="absolute inset-0">
+                        {/* 工人王师傅玩偶图片 */}
                         <Image
-                          src="/images/factory-worker-background.jpg"
-                          alt="工厂工人背景"
+                          src="/images/wangshifu-character.png"
+                          alt="工人王师傅玩偶"
                           fill
-                          className="object-cover"
+                          className="object-cover object-center"
                           priority
                         />
                         {/* 半透明遮罩层 */}
-                        <div className="absolute inset-0 bg-blue-900/40"></div>
+                        <div className="absolute inset-0 bg-blue-900/20"></div>
+                      </div>
+                    ) : character.id === 'lidajie' ? (
+                      <div className="absolute inset-0">
+                        {/* 公社李大姐玩偶图片 */}
+                        <Image
+                          src="/images/lidajie-character.png"
+                          alt="公社李大姐玩偶"
+                          fill
+                          className="object-cover object-center"
+                          priority
+                        />
+                        {/* 半透明遮罩层 */}
+                        <div className="absolute inset-0 bg-red-900/20"></div>
                       </div>
                     ) : (
                       <div className={`absolute inset-0 ${character.bgColor}`}></div>
