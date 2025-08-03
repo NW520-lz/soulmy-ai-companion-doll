@@ -145,7 +145,7 @@ export default function FAQSection() {
                   <span className="text-green-600 text-xl">📞</span>
                 </div>
                 <p className="font-medium text-gray-800 mb-2">电话咨询</p>
-                <p className="text-sm text-gray-600 mb-3">400-888-0123</p>
+                <p className="text-sm text-gray-600 mb-3">17708104913</p>
                 <button className="text-green-600 hover:text-green-700 font-medium text-sm transition-colors">
                   拨打电话 →
                 </button>
@@ -157,7 +157,7 @@ export default function FAQSection() {
                   <span className="text-orange-600 text-xl">📧</span>
                 </div>
                 <p className="font-medium text-gray-800 mb-2">邮件支持</p>
-                <p className="text-sm text-gray-600 mb-3">support@soulmy.ai</p>
+                <p className="text-sm text-gray-600 mb-3">lingchuangmengshao@163.com</p>
                 <button className="text-orange-600 hover:text-orange-700 font-medium text-sm transition-colors">
                   发送邮件 →
                 </button>

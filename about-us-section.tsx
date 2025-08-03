@@ -136,8 +136,8 @@ export default function AboutUsSection() {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-orange-100 to-amber-100">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=SoulMy团队工作场景"
-                  alt="SoulMy团队工作场景"
+                  src="/images/jimeng-2025-08-03-8267-旧相册特写翻页中，老人手指照片微笑讲述，孙女靠膝捧茶目光追随，逆光勾勒金边发丝，....jpeg"
+                  alt="老人和孙女翻看相册的温馨时光"
                   width={600}
                   height={400}
                   className="w-full h-80 object-cover"
@@ -173,7 +173,13 @@ export default function AboutUsSection() {
                         <div className="relative">
                           <div className="w-16 h-16 rounded-full overflow-hidden bg-gray-100">
                             <Image
-                              src={`/placeholder.svg?height=64&width=64&text=${member.name}`}
+                              src={
+                                member.name === "汪雨晗" ? "/images/female-avatar.jpeg" :
+                                member.name === "唐郡炼" ? "/images/female-avatar-2.jpeg" :
+                                member.name === "李泽" ? "/images/male-avatar.jpeg" :
+                                member.name === "蒋浩天" ? "/images/male-avatar.jpeg" :
+                                `/placeholder.svg?height=64&width=64&text=${member.name}`
+                              }
                               alt={member.name}
                               width={64}
                               height={64}
@@ -225,11 +231,11 @@ export default function AboutUsSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-2 text-gray-600">
                 <MapPin className="w-4 h-4" />
-                <span>成都市高新区天府大道</span>
+                <span>成都大学</span>
               </div>
               <div className="hidden sm:block w-1 h-1 bg-gray-400 rounded-full"></div>
               <div className="text-gray-600">
-                <span>邮箱：hello@soulmy.ai</span>
+                <span>邮箱：lingchuangmengshao@163.com</span>
               </div>
             </div>
           </div>
